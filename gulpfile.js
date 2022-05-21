@@ -58,14 +58,14 @@ export const buildJs = (done) => {
 // Styles
 
 export const buildCss = (done) => {
-	// gulp.src([
-	// 	'node_modules/swiper/swiper-bundle.css'
-	// ])
-	// 	.pipe(prefixer())
-	// 	.pipe(csso())
-	// 	.pipe(concat('vendor.min.css'))
-	// 	.pipe(gulp.dest('dist/css'))
-	// 	.pipe(sync.stream());
+	gulp.src([
+		'src/css/libs/normalize.css'
+	])
+		.pipe(prefixer())
+		.pipe(csso())
+		.pipe(concat('vendor.min.css'))
+		.pipe(gulp.dest('dist/css'))
+		.pipe(sync.stream());
 
 	gulp.src('src/css/main.scss')
 		.pipe(plumber())

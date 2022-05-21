@@ -1,11 +1,7 @@
-html {
-    box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html,
@@ -14,15 +10,13 @@ body {
 }
 
 body {
-	font-family: 'TTNorms', serif;
+	font-family: 'Manrope', sans-serif;
     font-weight: 400;
-    font-size: 14px;
-    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $gray;
     position: relative;
-
-    &.fixed {
-        overflow: hidden;
-    }
+    background: #FFFFFF;
 }
 
 
@@ -41,7 +35,7 @@ h6 {
 a {
     display: inline-block;
     text-decoration: none;
-    color: #000;
+    color: $purple;
 
     &.button {
         display: block;
@@ -68,11 +62,17 @@ button {
     cursor: pointer;
 }
 
-
-
-
-
-
+.title {
+    font-family: 'Mulish';
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    color: $purple;
+    & > span {
+        color: $blue;
+    }
+}
 
 .wrapper {
     display: flex;
@@ -89,13 +89,14 @@ button {
 }
 
 .container {
-    // max-width: 392px;
+    max-width: 1150px;
     width: 100%;
-    padding: 0 16px 0;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.container-fluid {
+    max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
 }
 
-// .container-fluid{
-//     max-width: 100%;
-// 	margin: 0 auto;
-// }

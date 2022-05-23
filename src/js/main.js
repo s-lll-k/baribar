@@ -1,5 +1,51 @@
 'use strict'
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    const generateICS = () => {
+        const addToCalBtn = document.querySelector('.add-to-my-calendar-btn');
+        addToCalBtn.addEventListener('click', () => {
+            const ics = `BEGIN:VCALENDAR
+                VERSION:2.0
+                PRODID:-//bobbin v0.1//NONSGML iCal Writer//EN
+                CALSCALE:GREGORIAN
+                METHOD:PUBLISH
+                BEGIN:VEVENT
+                DTSTART:20180327T080000Z
+                DTEND:20180327T110000Z
+                DTSTAMP:20091130T213238Z
+                UID:1285935469767a7c7c1a9b3f0df8003a@yourserver.com
+                CREATED:20091130T213238Z
+                DESCRIPTION:Example event 1
+                LAST-MODIFIED:20091130T213238Z
+                SEQUENCE:0
+                STATUS:CONFIRMED
+                SUMMARY:Example event 1
+                TRANSP:OPAQUE
+                END:VEVENT
+                BEGIN:VEVENT
+                DTSTART:20180328T120000Z
+                DTEND:20180328T130000Z
+                DTSTAMP:20091130T213238Z
+                UID:1285935469767a7c7c1a9b3f0df8003b@yourserver.com
+                CREATED:20091130T213238Z
+                DESCRIPTION:Example event 2
+                LAST-MODIFIED:20091130T213238Z
+                SEQUENCE:0
+                STATUS:CONFIRMED
+                SUMMARY:Example event 2
+                TRANSP:OPAQUE
+                END:VEVENT
+                END:VCALENDAR`;
+            const link = document.createElement('a');
+            
+            link.setAttribute('href', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics));
+            link.setAttribute('download', 'calendar');
+            link.click();
+        });
+    }
+    generateICS()
+
     const changeHeader = () => {
         const header = document.querySelector('.header');
         if (window.scrollY > 1) {
@@ -46,4 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     checkInnerWidth();
     window.addEventListener('resize', checkInnerWidth);
+
+
+
 });

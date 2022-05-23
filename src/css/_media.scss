@@ -66,6 +66,10 @@
         padding: 40px 20px;
     }
 
+    .team-member {
+        height: 290px;
+    }
+
     .footer {
         &__inner {
             flex-direction: column;
@@ -112,6 +116,14 @@
     }
 
     .welcome {
+        &__container {
+            &::before {
+                width: 308px;
+                height: 231px;
+                left: -34px;
+                top: 56px;
+            }
+        }
         &__title {
             font-size: 26px;
             line-height: 1.3;
@@ -194,6 +206,9 @@
             }
         }
     }
+    .team-member {
+        height: 255px;
+    }
     .footer {
         &__sponsors{
             flex-direction: column;
@@ -227,13 +242,19 @@
     .team {
         &__inner {
             .team-member {
+                max-width: 320px;
                 width: 100%;
+                margin: 0 auto;
             }
         }
     }
     .team-member {
         &__box {
             width: 127px;
+        }
+        &__image {
+            width: 199px;
+            height: 232px;
         }
     }
 
@@ -263,5 +284,8 @@
             gap: unset;
             justify-content: space-between;
         }
+    }
+    .team-member {
+        padding-right: 0;
     }
 }

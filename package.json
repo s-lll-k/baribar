@@ -35,12 +35,8 @@
     "gulp-svgmin": "^3.0.0"
   },
   "dependencies": {
-    "jquery": "^3.5.1",
-    "jquery-form-styler": "^2.0.2",
-    "parallax-imagescroll": "^0.2.3",
-    "rateyo": "^2.3.5",
-    "magnific-popup": "^1.1.0",
-    "normalize.css": "^8.0.1",
-    "slick-carousel": "^1.8.1"
+    "add-to-calendar-button": "^1.8.6",
+    "ical-gen": "0.0.5",
+    "normalize.css": "^8.0.1"
   }
 }

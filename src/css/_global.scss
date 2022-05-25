@@ -8,6 +8,9 @@ html,
 body {
     height: 100%;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
 	font-family: 'Manrope', sans-serif;
@@ -17,6 +20,9 @@ body {
     color: $gray;
     position: relative;
     background: #FFFFFF;
+    &._fixed {
+        overflow: hidden;
+    }
 }
 
 

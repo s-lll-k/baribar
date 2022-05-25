@@ -92,11 +92,6 @@
 }
 
 @media (max-width: 768px) {
-    body {
-        &._fixed {
-            overflow: hidden;
-        }
-    }
     .header {
         &__logo {
             width: 150px;
@@ -173,18 +168,28 @@
     }
     
     .project {
+        margin-top: 50px;
+        &__column {
+            position: static;
+        }
         &__title {
             margin-bottom: 30px;
         }
         &__inner {
             flex-direction: column;
             align-items: unset;
+            position: relative;
+            padding-top: 399px;
         }
         &__box {
             order: -1;
         }
         &__image {
-            margin: 0 auto 30px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
             &::before {
                 right: 14px;
                 bottom: 45px;
@@ -213,6 +218,22 @@
         &__sponsors{
             flex-direction: column;
             margin-top: 66px;
+        }
+    }
+
+    .modal-bg {
+        z-index: 98;
+    }
+    .modal {
+        height: 100%;
+        max-width: 100%;
+        padding: 145px 20px 50px;
+        &__close {
+            display: none;
+        }
+        &__go-back {
+            display: block;
+            margin-bottom: 61px;
         }
     }
 }

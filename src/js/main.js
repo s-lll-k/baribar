@@ -12,6 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     block: 'center',
                     behavior: 'smooth'
                 });
+                if (window.innerWidth <= 768) {
+                    const menuBtn = document.querySelector(".menu-btn"),
+                        menu = document.querySelector(".header__nav");
+                    document.body.classList.remove("_fixed");
+                    menu.classList.remove('header__nav_active');
+                    menuBtn.classList.remove("menu-btn_active");
+                }
             });
         });
     }
